@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "migrate": "npx knex migrate:latest --knexfile db/knexfile.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "migrate": "npx knex migrate:latest",
+    "rollback": "npx knex migrate:rollback",
+    "migrate:make": "npx knex migrate:make",
+    "seed": "npx knex seed:run",
+    "seed:make": "npx knex seed:make"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +18,8 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "knex": "^2.1.0",
-    "pg": "^8.7.3"
+    "pg": "^8.7.3",
+    "swagger-jsdoc": "^6.2.1",
+    "swagger-ui-express": "^4.4.0"
   }
 }

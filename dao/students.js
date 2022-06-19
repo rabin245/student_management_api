@@ -7,6 +7,7 @@ async function getAllStudents() {
       "student.name",
       "student.email",
       "student.section",
+      "student.age",
       // "student.age",
       // "student.created_at",
       // db.raw("json_object_agg (course.id, course.course_name) as courses")
@@ -30,6 +31,7 @@ async function getStudentById(id) {
       "student.name",
       "student.email",
       "student.section",
+      "student.age",
       db.raw(
         "json_agg(json_build_object('id', course.id, 'title', course.course_name, 'credit_hours', course.credit_hours)) as courses"
       )

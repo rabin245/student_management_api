@@ -5,7 +5,10 @@ async function getAllCourses() {
 }
 
 async function getCourseById(id) {
-  return await db.select().from("course").where("id", id);
+  return await db
+    .select("id", "course_name", "credit_hours")
+    .from("course")
+    .where("id", id);
 }
 
 async function createCourse(course) {

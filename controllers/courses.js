@@ -39,7 +39,7 @@ async function createCourse(req, res) {
     res.status(500).send({
       msg: "Something went wrong when creating course",
       error: error,
-      test: error.message,
+      errmsg: error.message,
     });
   }
 }

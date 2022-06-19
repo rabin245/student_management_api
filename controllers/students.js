@@ -4,7 +4,7 @@ async function getAllStudents(req, res) {
   try {
     const data = await studentService.getAllStudents();
 
-    res.status(201).send(data);
+    res.status(200).send(data);
   } catch (error) {
     console.log(error);
 
